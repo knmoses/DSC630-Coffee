@@ -1,0 +1,135 @@
+---
+title: "1.3 Assignment"
+author: "Krystina Moses"
+date: "March 15, 2020"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+```
+
+Import, Plot, Summarize, and Save Data
+
+Using the Bureau of Labor Statistics data, choose a dataset that interest you. Load in the dataset from csv file.
+
+Removed rows with NA data.
+
+```{r}
+coffee1 <- read.csv(file = "AvgCoffee.csv", header = TRUE)
+coffee <- na.omit(coffee1)
+```
+
+Summary of dataset
+
+```{r}
+summary(coffee)
+```
+
+Generate summary statistics for 2 variables:
+
+Summary of the January column within the dataset
+
+```{r}
+summary(coffee$Jan)
+```
+
+Summary of the February column within the dataset
+
+```{r}
+summary(coffee$Feb)
+```
+
+Plot some of the features (e.g., histograms, box plots, density plots, etc.) of several variables
+
+Boxplot of January/Year
+
+```{r}
+janbox <- ggplot(coffee, aes(Year, Jan))
+janbox + geom_boxplot() + labs(x="Year", y= "Jan")
+
+```
+
+Density of February
+
+```{r}
+jandensity <- ggplot(coffee, aes(Feb))
+jandensity + geom_density() + labs(x="Feb", y = "Density")
+
+```
+
+Explore Some Bivariate Relations
+
+Use the same dataset within the same website to explore some bivariate relations
+
+Pearson correlation between all variables
+
+```{r}
+cor(coffee, use = "complete.obs", method = "pearson")
+```
+
+Pearson correlation between January and February
+
+```{r}
+cor(coffee$Jan, coffee$Feb, use = "complete.obs", method = "pearson")
+```
+
+Pearson correlation between March and April
+
+```{r}
+cor(coffee$Mar, coffee$Apr, use = "complete.obs", method = "pearson")
+```
+
+Scatterplot of January and February data
+
+```{r}
+coffeescatter <- ggplot(coffee, aes(Jan, Feb))
+coffeescatter + geom_point() + geom_smooth(method = "lm", colour = "Blue") +labs(x="January", y= "February")
+```
+
+Scatterplot of March and April data
+
+```{r}
+coffeescatter <- ggplot(coffee, aes(Mar, Apr))
+coffeescatter + geom_point() + geom_smooth(method = "lm", colour = "Red") +labs(x="March", y= "April")
+```
+
+Line Chart for January
+
+```{r}
+ggplot(coffee, aes(x = Year, y = Jan)) + geom_line() 
+```
+
+Line Chart for December
+
+```{r}
+ggplot(coffee, aes(x = Year, y = Dec)) + geom_line() 
+```
+
+Organize a Data Report
+
+Summary of dataset
+
+```{r}
+summary(coffee)
+```
+
+Description of dataset
+Average Prie of Coffee per lb, 100% ground roast
+
+```{r}
+str(coffee)
+```
+
+Results:
+
+1. Using the summary of the data for each month, we can determine that the average coffee price per lb was approximately $4.80 (some higher, some lower)
+
+2. We can see that between months January and February as well as March and April there is a positive linear relationshop. We can see this within the graph as well as formula.
+
+3. Looking at the line charts, we can observe that in the year 2013 for January and 2012 for December that the price of coffee per pound was at it's peak.
+
+4. Each month varies based on the year; however, you never see the price per lb drop below 3.5 or go above 6. This is an interesting observation as it can give us the approximate prie per pound to expect over the coming years. 
