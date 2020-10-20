@@ -2,6 +2,7 @@
 Predictive Analytics 
 
 ## About
+This project uses different techniques to determine the average monthly coffee price, per pound as well as other observations within the data.
 
 ## Programming Language
 R
