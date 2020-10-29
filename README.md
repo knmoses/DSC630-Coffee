@@ -9,3 +9,8 @@ R
 
 ## Data
 Dataset included in the respository
+
+## License
+MIT License
+
+Copyright (c) 2020 Krystina Moses
