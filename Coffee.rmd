@@ -1,13 +1,3 @@
----
-title: "1.3 Assignment"
-author: "Krystina Moses"
-date: "March 15, 2020"
-output:
-  html_document: default
-  pdf_document: default
-  word_document: default
----
-
 ```{r setup, include=FALSE}
 library(ggplot2)
 ```
@@ -123,13 +113,3 @@ Average Prie of Coffee per lb, 100% ground roast
 ```{r}
 str(coffee)
 ```
-
-Results:
-
-1. Using the summary of the data for each month, we can determine that the average coffee price per lb was approximately $4.80 (some higher, some lower)
-
-2. We can see that between months January and February as well as March and April there is a positive linear relationshop. We can see this within the graph as well as formula.
-
-3. Looking at the line charts, we can observe that in the year 2013 for January and 2012 for December that the price of coffee per pound was at it's peak.
-
-4. Each month varies based on the year; however, you never see the price per lb drop below 3.5 or go above 6. This is an interesting observation as it can give us the approximate prie per pound to expect over the coming years. 
