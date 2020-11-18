@@ -21,7 +21,9 @@ R Markdown Code: "Coffee.rmd"
 R
 
 ## Data
-Dataset included in the respository (AvgCoffee.csv)
+Dataset included in the respository 
+
+* AvgCoffee.csv
 
 ## License
 MIT License
