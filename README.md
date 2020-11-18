@@ -4,6 +4,9 @@ Predictive Analytics
 ## About
 This project uses different techniques to determine the average monthly coffee price, per pound as well as other observations within the data.
 
+## File Information
+R Markdown Code: "Coffee.rmd"
+
 ## Results
 
 1. Using the summary of the data for each month, we can determine that the average coffee price per lb was approximately $4.80 (some higher, some lower)
@@ -18,7 +21,7 @@ This project uses different techniques to determine the average monthly coffee p
 R
 
 ## Data
-Dataset included in the respository
+Dataset included in the respository (coffee.csv)
 
 ## License
 MIT License
